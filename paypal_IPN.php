@@ -7,12 +7,12 @@ class paypal_IPN{
 
 public function __construct($mode = 'live'){
 
-    if($mode == 'live'){
+    if($mode == 'live')
         $this = _url = 'https://www.paypal.com/cgi-bin/webscr';
 
-    }else{
+    else
         $this = _url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
-    }
+    
 
 
 
@@ -24,8 +24,8 @@ public function run(){
 
 $postFields = 'cmd=_notify-validate';
 
-foreach($_POST as $KEY => $value){
-    $postFields.= "&$key=".$value;
+foreach($_POST as $Key => $value){
+    $postFields.= "&$key=".urlencode($value);
 
 }
 
