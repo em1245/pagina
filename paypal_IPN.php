@@ -8,10 +8,10 @@ class paypal_IPN{
 public function __construct($mode = 'live'){
 
     if($mode == 'live'){
-        $this = _url = 'link paypal';
+        $this = _url = 'https://www.paypal.com/cgi-bin/webscr';
 
     }else{
-        $this = _url = 'link paypal sandbox';
+        $this = _url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
     }
 
 
